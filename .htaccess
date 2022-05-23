@@ -1,0 +1,66 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+#TrangChu
+RewriteRule ^home$ /pages/dashboard.php [L]
+RewriteRule ^auth/login$ /auth/login.php [L]
+RewriteRule ^auth/register$ /auth/register.php [L]
+RewriteRule ^auth/forgot-password$ /auth/forgot-password.php [L]
+RewriteRule ^auth/reset-password$ /auth/reset-password.php [L]
+RewriteRule ^profile/info$ /profile/info.php [L]
+RewriteRule ^profile/update-info$ /profile/update_info.php [L]
+RewriteRule ^profile/history$ /profile/history.php [L]
+RewriteRule ^profile/logout$ /profile/logout.php [L]
+RewriteRule ^recharge/banking$ /recharge/banking.php [L]
+RewriteRule ^recharge/card$ /recharge/card.php [L]
+RewriteRule ^service/facebook/like-post/order$ /service/facebook/like_post.php [L]
+RewriteRule ^service/facebook/like-post/list$ /service/facebook/like_post_list.php [L]
+RewriteRule ^service/facebook/follow/order$ /service/facebook/follow.php [L]
+RewriteRule ^service/facebook/follow/list$ /service/facebook/follow_list.php [L]
+RewriteRule ^tools/get-id$ /tools/get-id.php [L]
+RewriteRule ^tools/get-2fa$ /tools/get-2fa.php [L]
+
+#modunAdmin
+RewriteRule ^modun/auth/login$ /modun/auth/login.php [L]
+RewriteRule ^modun/auth/register$ /modun/auth/register.php [L]
+RewriteRule ^modun/tool/get-id-fb$ /modun/tool/get_id_facebook.php [L]
+RewriteRule ^modun/recharge/card$ /modun/recharge/card.php [L]
+RewriteRule ^modun/administrator/edit-site$ /modun/administrator/edit_site.php [L]
+RewriteRule ^modun/administrator/user/blocked$ /modun/administrator/user/blocked.php [L]
+RewriteRule ^modun/administrator/user/unblocked$ /modun/administrator/user/unblocked.php [L]
+RewriteRule ^modun/administrator/user/edit$ /modun/administrator/user/edit.php [L]
+RewriteRule ^modun/administrator/user/delete$ /modun/administrator/user/delete.php [L]
+RewriteRule ^modun/administrator/user/point$ /modun/administrator/user/point.php [L]
+RewriteRule ^modun/administrator/service/add$ /modun/administrator/service/add.php [L]
+RewriteRule ^modun/administrator/service/edit$ /modun/administrator/service/edit.php [L]
+RewriteRule ^modun/administrator/service/delete$ /modun/administrator/service/delete.php [L]
+RewriteRule ^modun/administrator/service/running$ /modun/administrator/service/running.php [L]
+RewriteRule ^modun/administrator/service/complete$ /modun/administrator/service/complete.php [L]
+RewriteRule ^modun/administrator/service/blocked$ /modun/administrator/service/blocked.php [L]
+RewriteRule ^modun/administrator/service/progress$ /modun/administrator/service/progress.php [L]
+RewriteRule ^modun/profile/change-info$ /modun/profile/change_info.php [L]
+RewriteRule ^modun/profile/change-password$ /modun/profile/change_password.php [L]
+RewriteRule ^modun/profile/update-info$ /modun/profile/update_info.php [L]
+
+RewriteRule ^administrator/user/edit/id-([a-zA-Z0-9_-]+)$ /administrator/user/edit.php?user_id=$1 [L]
+RewriteRule ^administrator/service/edit/id-([a-zA-Z0-9_-]+)$ /administrator/service/edit.php?service_id=$1 [L]
+RewriteRule ^administrator/user/list$ /administrator/user/list.php [L]
+RewriteRule ^administrator/user/point$ /administrator/user/point.php [L]
+RewriteRule ^administrator/edit-site$ /administrator/edit_site.php [L]
+
+RewriteRule ^administrator/service/add$ /administrator/service/add.php [L]
+RewriteRule ^administrator/service/list$ /administrator/service/list.php [L]
+RewriteRule ^administrator/service/facebook/like-post/list$ /administrator/service/facebook/like_post_list.php [L]
+RewriteRule ^administrator/service/facebook/follow/list$ /administrator/service/facebook/follow_list.php [L]
+
+
+#TrangChu
+RewriteRule ^modun/service/facebook/like-post/order$ /modun/service/facebook/like_post.php [L]
+RewriteRule ^modun/service/facebook/follow/order$ /modun/service/facebook/follow.php [L]
+
+#LoiKhongTonTai
+ErrorDocument 404 /pages/error/404.php
+ErrorDocument 402 /pages/error/404.php
+ErrorDocument 403 /pages/error/404.php
+ErrorDocument 404 /pages/error/404.php
+ErrorDocument 500 /pages/error/404.php
